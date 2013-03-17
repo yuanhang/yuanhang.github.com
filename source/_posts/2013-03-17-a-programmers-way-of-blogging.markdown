@@ -5,13 +5,13 @@ date: 2013-03-17 18:10
 comments: true
 categories: 
 ---
-#A programmer's way of blogging
 I like to keep my fingers on the keyboard and getting everything done.
 I like 
 > * vim
 > * git
 > * github
 > * markdown
+
 There is a way of blogging using the combination of all of them. That is
 what I'm using (trying), **[Octopress](http://octopress.org)**. 
 
