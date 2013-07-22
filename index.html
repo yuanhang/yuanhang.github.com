@@ -167,6 +167,18 @@ need to do is refresh the URL in your browser.</p>
 <pre><code>rake deploy
 </code></pre>
 
+<h2>Push your new blog to source</h2>
+
+<p><code>rake deploy</code> only push the generated website to &#8220;master&#8221; branch of the
+remote octopress repository. It will not automatically add your new post to
+your local/remote repository. To save the new blog, you will need to add
+it to git, and then push it to remote &#8220;source&#8221;.</p>
+
+<pre><code>git add .
+git ci -am "add new post"
+git push 
+</code></pre>
+
 <p>Go and check it!</p>
 </div>
   
