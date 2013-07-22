@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Yuanhang's Blog]]></title>
+  <link href="http://yuanhang.github.com/atom.xml" rel="self"/>
+  <link href="http://yuanhang.github.com/"/>
+  <updated>2013-07-22T23:23:34+08:00</updated>
+  <id>http://yuanhang.github.com/</id>
+  <author>
+    <name><![CDATA[Yuanhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blog on a new machine: using octopress and github pages]]></title>
+    <link href="http://yuanhang.github.com/blog/2013/07/22/blog-on-a-new-machine-using-octopress-and-github-pages/"/>
+    <updated>2013-07-22T22:51:00+08:00</updated>
+    <id>http://yuanhang.github.com/blog/2013/07/22/blog-on-a-new-machine-using-octopress-and-github-pages</id>
+    <content type="html"><![CDATA[<p>I have already create a github pages sometime before, using octopress,
+hosted on github.
+Today when I want to write a blog, I found I can not find the local
+copy of the blog git repository to start. And I can&#8217;t find an instruction on how
+to reuse an existing octopress git repository to continue blogging on
+the <a href="http://octopress.org">official octopress website</a>. After some
+googling, here is how.</p>
+
+<h2>Clone your existing blog repository</h2>
+
+<pre><code>git clone url_to_your_repository
+</code></pre>
+
+<p>The default branch after your checking out should be &#8220;master&#8221; branch.
+Since octopress stores the &#8220;posts/blogs&#8221; under branch &#8220;source&#8221;, and
+place the generated static website under &#8220;master&#8221;, I have to check out
+the &#8220;source&#8221; branch from the remote repository to continue blogging.
+This can be done by:</p>
+
+<pre><code>git checkout source
+</code></pre>
+
+<h2>Install dependencies</h2>
+
+<pre><code>bundle install
+</code></pre>
+
+<p>this will get you all the required gems.</p>
+
+<h2>Setup octopress to work with github pages</h2>
+
+<pre><code>rake setup_github_pages
+</code></pre>
+
+<h2>Setup locale</h2>
+
+<p>Since I may use Chinese to blog, I have to setup the locale. Or there
+will be errors like &#8220;invalid byte sequence in xxxx(ASCII-8bit?)&#8221;.
+On Mac OS X</p>
+
+<pre><code>export LC_ALL=zh_CN.UTF-8 
+</code></pre>
+
+<p>On Windows</p>
+
+<pre><code>set LC_ALL=zh_CN.UTF-8 
+</code></pre>
+
+<h2>Test if it works</h2>
+
+<p>First generate the static website from source.</p>
+
+<pre><code>rake generate
+</code></pre>
+
+<p>Then preview the website at local.</p>
+
+<pre><code>rake preview
+</code></pre>
+
+<p>This action will start a embeded webserver (WebBrick) listen at
+<a href="http://localhost:4000">http://localhost:4000</a>.
+The good thing is it will watch the file change and auto re-generate the
+website if an change is detected. To view the latest website, all you
+need to do is refresh the URL in your browser.</p>
+
+<h2>Deploy it to github pages</h2>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>Go and check it!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA["你最擅长哪种开发"]]></title>
+    <link href="http://yuanhang.github.com/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa/"/>
+    <updated>2013-03-28T16:43:00+08:00</updated>
+    <id>http://yuanhang.github.com/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa</id>
+    <content type="html"><![CDATA[<p>今天有人问我“你最擅长哪种开发”， 结果被这个问题问倒了。我在学校和在微软实习的时候只会c/c++，工作后这两年使用或自学了java、c#、ruby （rails）、objective-c、javascript、powershell。数数种类也不少，但如果说有没有哪种语言拿出来可以从根到梢都清清楚楚如数家珍，却感觉一种也没有。c/c++可能勉强算的上，但两年没有用了，也遗忘了不少。况且对于它们根本上的特质，也说不出来。这个问题让我感觉很难回答，让我对自己反省了很久，也想到了很多。</p>
+
+<h2>如果说是“你最擅长哪种语言的开发”</h2>
+
+<h3>1. 有没有必要了解到根上。</h3>
+
+<p>不必了解后再开始，但能了解尽量多了解。了解后可能会省却大量死记硬背或记不住的地方。</p>
+
+<h3>2. 有没有必要达到不用google的程度。</h3>
+
+<p>没有必要达到不用google再开始，但google到的结果力求消化理解，争取下次不再google。  <br/>
+多次google同一个问题，要记住。   <br/>
+整理需要google来的结果，存入evernote。</p>
+
+<h3>3. 学习一种语言应该学什么。</h3>
+
+<p>王垠。 <br/>
+Matz。</p>
+
+<h3>4. 语言对于开发有什么样的影响。</h3>
+
+<p>“程序员单位时间能写的代码行数是有限的，但是不同语言的效率是不同的。”</p>
+
+<h2>如果说是“你最擅长哪种平台的开发”</h2>
+
+<h3>1. 什么叫擅长这种平台的开发。</h3>
+
+<p>了解平台和别的平台的差异。   <br/>
+有过多次开发体会。</p>
+
+<h3>2. 平台的差异体现在哪里。</h3>
+
+<p>你能接触到的相关资源的多少。 <br/>
+平台的使用量。 <br/>
+平台的问题和优势。</p>
+
+<h3>3. 平台的差异对于开发有什么影响。</h3>
+
+<p>资源。
+开发有没有意义。</p>
+
+<h2>如果说是“你最擅长哪种开发的方式”</h2>
+
+<h3>1. 什么叫擅长某种开发方式</h3>
+
+<p>迭代式。 <br/>
+瀑布式。</p>
+
+<h3>2. 你都会那些开发方式。</h3>
+
+<p>迭代式。</p>
+
+<h3>3. 开发方式对开发有什么影响。</h3>
+
+<p>开发能走多久。 <br/>
+开发能走多远。</p>
+
+<h2>如果说是“你最擅长在哪种情境下开发”</h2>
+
+<p>独处，不必在意别人的看法，自己和自己说话，放松，投入，匠心，阳光，大桌子，高度合适的椅子，整洁，跑步机，没有人盯着，没有人询问进度，没有人认识你，没有人在意你，自己想做的、有求知的乐趣，得意，随时上线，有人用，有反馈，每次工作都在使结果变好，并且大家都感觉得到，弹性时间，弹性地点，能发挥自己想法，有人能讨论。</p>
+
+<h2>你最擅长和别人对你的评价。</h2>
+
+<h3>1. 你知不知道最擅长什么。</h3>
+
+<p>学习，探索，改进。</p>
+
+<h3>2. 有没有必要知道最擅长什么。</h3>
+
+<p>知道擅长什么才能扬长避短，发挥自己的优势。</p>
+
+<h3>3. 为什么一个询问状态的问题会感觉难以回答。</h3>
+
+<p>不了解自己的水准。 <br/>
+觉得自己的水准没有达到最好。 <br/>
+不知道别人需要什么。 <br/>
+害怕被别人误解，失去机会。</p>
+
+<!--##为什么要在意别人的评价。-->
+
+
+<!--别人是潜在的机会。-->
+
+
+<!--变化！革命！不要压制自我，会让你变得平庸！不要放松对自己的要求！自制！自由！-->
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Programmer's way of blogging]]></title>
+    <link href="http://yuanhang.github.com/blog/2013/03/17/a-programmers-way-of-blogging/"/>
+    <updated>2013-03-17T18:10:00+08:00</updated>
+    <id>http://yuanhang.github.com/blog/2013/03/17/a-programmers-way-of-blogging</id>
+    <content type="html"><![CDATA[<p>I like to keep my fingers on the keyboard and getting everything done.
+I like</p>
+
+<blockquote><ul>
+<li>vim</li>
+<li>git</li>
+<li>github</li>
+<li>markdown</li>
+</ul>
+</blockquote>
+
+<p>There is a way of blogging using the combination of all of them. That is
+what I&#8217;m using (trying), <strong><a href="http://octopress.org">Octopress</a></strong>.</p>
+
+<p>Until now, it feels great!</p>
+]]></content>
+  </entry>
+  
+</feed>

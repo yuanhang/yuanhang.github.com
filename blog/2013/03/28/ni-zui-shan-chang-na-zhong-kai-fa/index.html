@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Yuanhang's Blog</title>
+  <title>"你最擅长哪种开发" - Yuanhang's Blog</title>
   <meta name="author" content="Yuanhang">
 
   
-  <meta name="description" content="I have already create a github pages sometime before, using octopress,
-hosted on github.
-Today when I want to write a blog, I found I can not find &hellip;">
+  <meta name="description" content="今天有人问我“你最擅长哪种开发”， 结果被这个问题问倒了。我在学校和在微软实习的时候只会c/c++，工作后这两年使用或自学了java、c#、ruby （rails）、objective-c、javascript、powershell。数数种类也不少， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Today when I want to write a blog, I found I can not find &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yuanhang.github.com">
+  <link rel="canonical" href="http://yuanhang.github.com/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Yuanhang's Blog" type="application/atom+xml">
@@ -65,122 +63,12 @@ Today when I want to write a blog, I found I can not find &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/07/22/blog-on-a-new-machine-using-octopress-and-github-pages/">Blog on a New Machine: Using Octopress and Github Pages</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-22T22:51:00+08:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have already create a github pages sometime before, using octopress,
-hosted on github.
-Today when I want to write a blog, I found I can not find the local
-copy of the blog git repository to start. And I can&#8217;t find an instruction on how
-to reuse an existing octopress git repository to continue blogging on
-the <a href="http://octopress.org">official octopress website</a>. After some
-googling, here is how.</p>
-
-<h2>Clone your existing blog repository</h2>
-
-<pre><code>git clone url_to_your_repository
-</code></pre>
-
-<p>The default branch after your checking out should be &#8220;master&#8221; branch.
-Since octopress stores the &#8220;posts/blogs&#8221; under branch &#8220;source&#8221;, and
-place the generated static website under &#8220;master&#8221;, I have to check out
-the &#8220;source&#8221; branch from the remote repository to continue blogging.
-This can be done by:</p>
-
-<pre><code>git checkout source
-</code></pre>
-
-<h2>Install dependencies</h2>
-
-<pre><code>bundle install
-</code></pre>
-
-<p>this will get you all the required gems.</p>
-
-<h2>Setup octopress to work with github pages</h2>
-
-<pre><code>rake setup_github_pages
-</code></pre>
-
-<h2>Setup locale</h2>
-
-<p>Since I may use Chinese to blog, I have to setup the locale. Or there
-will be errors like &#8220;invalid byte sequence in xxxx(ASCII-8bit?)&#8221;.
-On Mac OS X</p>
-
-<pre><code>export LC_ALL=zh_CN.UTF-8 
-</code></pre>
-
-<p>On Windows</p>
-
-<pre><code>set LC_ALL=zh_CN.UTF-8 
-</code></pre>
-
-<h2>Test if it works</h2>
-
-<p>First generate the static website from source.</p>
-
-<pre><code>rake generate
-</code></pre>
-
-<p>Then preview the website at local.</p>
-
-<pre><code>rake preview
-</code></pre>
-
-<p>This action will start a embeded webserver (WebBrick) listen at
-<a href="http://localhost:4000">http://localhost:4000</a>.
-The good thing is it will watch the file change and auto re-generate the
-website if an change is detected. To view the latest website, all you
-need to do is refresh the URL in your browser.</p>
-
-<h2>Deploy it to github pages</h2>
-
-<pre><code>rake deploy
-</code></pre>
-
-<p>Go and check it!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa/">&#8220;你最擅长哪种开发&#8221;</a></h1>
+      <h1 class="entry-title">"你最擅长哪种开发"</h1>
     
     
       <p class="meta">
@@ -203,7 +91,7 @@ need to do is refresh the URL in your browser.</p>
   </header>
 
 
-  <div class="entry-content"><p>今天有人问我“你最擅长哪种开发”， 结果被这个问题问倒了。我在学校和在微软实习的时候只会c/c++，工作后这两年使用或自学了java、c#、ruby （rails）、objective-c、javascript、powershell。数数种类也不少，但如果说有没有哪种语言拿出来可以从根到梢都清清楚楚如数家珍，却感觉一种也没有。c/c++可能勉强算的上，但两年没有用了，也遗忘了不少。况且对于它们根本上的特质，也说不出来。这个问题让我感觉很难回答，让我对自己反省了很久，也想到了很多。</p>
+<div class="entry-content"><p>今天有人问我“你最擅长哪种开发”， 结果被这个问题问倒了。我在学校和在微软实习的时候只会c/c++，工作后这两年使用或自学了java、c#、ruby （rails）、objective-c、javascript、powershell。数数种类也不少，但如果说有没有哪种语言拿出来可以从根到梢都清清楚楚如数家珍，却感觉一种也没有。c/c++可能勉强算的上，但两年没有用了，也遗忘了不少。况且对于它们根本上的特质，也说不出来。这个问题让我感觉很难回答，让我对自己反省了很久，也想到了很多。</p>
 
 <h2>如果说是“你最擅长哪种语言的开发”</h2>
 
@@ -292,22 +180,16 @@ Matz。</p>
 
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/17/a-programmers-way-of-blogging/">A Programmer&#8217;s Way of Blogging</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Yuanhang</span></span>
+
+      
 
 
 
@@ -319,41 +201,34 @@ Matz。</p>
   
 
 
-<time datetime="2013-03-17T18:10:00+08:00" pubdate data-updated="true">Mar 17<span>th</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-03-28T16:43:00+08:00" pubdate data-updated="true">Mar 28<span>th</span>, 2013</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>I like to keep my fingers on the keyboard and getting everything done.
-I like</p>
-
-<blockquote><ul>
-<li>vim</li>
-<li>git</li>
-<li>github</li>
-<li>markdown</li>
-</ul>
-</blockquote>
-
-<p>There is a way of blogging using the combination of all of them. That is
-what I&#8217;m using (trying), <strong><a href="http://octopress.org">Octopress</a></strong>.</p>
-
-<p>Until now, it feels great!</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yuanhang.github.com/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa/" data-via="" data-counturl="http://yuanhang.github.com/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/17/a-programmers-way-of-blogging/" title="Previous Post: A Programmer's way of blogging">&laquo; A Programmer's way of blogging</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/07/22/blog-on-a-new-machine-using-octopress-and-github-pages/" title="Next Post: Blog on a new machine: using octopress and github pages">Blog on a new machine: using octopress and github pages &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -365,11 +240,11 @@ what I&#8217;m using (trying), <strong><a href="http://octopress.org">Octopress<
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa/">&#8220;你最擅长哪种开发&#8221;</a>
+        <a href="/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa/">"你最擅长哪种开发"</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2013/03/17/a-programmers-way-of-blogging/">A Programmer&#8217;s way of blogging</a>
+        <a href="/blog/2013/03/17/a-programmers-way-of-blogging/">A Programmer's way of blogging</a>
       </li>
     
   </ul>
@@ -381,6 +256,7 @@ what I&#8217;m using (trying), <strong><a href="http://octopress.org">Octopress<
 
   
 </aside>
+
 
     </div>
   </div>

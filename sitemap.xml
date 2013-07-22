@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://yuanhang.github.com/blog/2013/03/17/a-programmers-way-of-blogging/</loc>
+        <lastmod>2013-07-22T22:34:27+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yuanhang.github.com/blog/2013/03/28/ni-zui-shan-chang-na-zhong-kai-fa/</loc>
+        <lastmod>2013-07-22T22:34:27+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://yuanhang.github.com/blog/2013/07/22/blog-on-a-new-machine-using-octopress-and-github-pages/
+        </loc>
+        <lastmod>2013-07-22T23:23:34+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yuanhang.github.com/blog/archives/</loc>
+        <lastmod>2013-07-22T23:23:34+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yuanhang.github.com/</loc>
+        <lastmod>2013-07-22T23:23:34+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yuanhang.github.com/robots.txt</loc>
+        <lastmod>2013-07-22T22:34:27+08:00</lastmod>
+    </url>
+</urlset>

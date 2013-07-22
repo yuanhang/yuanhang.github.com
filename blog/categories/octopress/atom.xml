@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | Yuanhang's Blog]]></title>
+  <link href="http://yuanhang.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://yuanhang.github.com/"/>
+  <updated>2013-07-22T23:23:34+08:00</updated>
+  <id>http://yuanhang.github.com/</id>
+  <author>
+    <name><![CDATA[Yuanhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blog on a new machine: using octopress and github pages]]></title>
+    <link href="http://yuanhang.github.com/blog/2013/07/22/blog-on-a-new-machine-using-octopress-and-github-pages/"/>
+    <updated>2013-07-22T22:51:00+08:00</updated>
+    <id>http://yuanhang.github.com/blog/2013/07/22/blog-on-a-new-machine-using-octopress-and-github-pages</id>
+    <content type="html"><![CDATA[<p>I have already create a github pages sometime before, using octopress,
+hosted on github.
+Today when I want to write a blog, I found I can not find the local
+copy of the blog git repository to start. And I can't find an instruction on how
+to reuse an existing octopress git repository to continue blogging on
+the <a href="http://octopress.org">official octopress website</a>. After some
+googling, here is how.</p>
+
+<h2>Clone your existing blog repository</h2>
+
+<pre><code>git clone url_to_your_repository
+</code></pre>
+
+<p>The default branch after your checking out should be "master" branch.
+Since octopress stores the "posts/blogs" under branch "source", and
+place the generated static website under "master", I have to check out
+the "source" branch from the remote repository to continue blogging.
+This can be done by:</p>
+
+<pre><code>git checkout source
+</code></pre>
+
+<h2>Install dependencies</h2>
+
+<pre><code>bundle install
+</code></pre>
+
+<p>this will get you all the required gems.</p>
+
+<h2>Setup octopress to work with github pages</h2>
+
+<pre><code>rake setup_github_pages
+</code></pre>
+
+<h2>Setup locale</h2>
+
+<p>Since I may use Chinese to blog, I have to setup the locale. Or there
+will be errors like "invalid byte sequence in xxxx(ASCII-8bit?)".
+On Mac OS X</p>
+
+<pre><code>export LC_ALL=zh_CN.UTF-8 
+</code></pre>
+
+<p>On Windows</p>
+
+<pre><code>set LC_ALL=zh_CN.UTF-8 
+</code></pre>
+
+<h2>Test if it works</h2>
+
+<p>First generate the static website from source.</p>
+
+<pre><code>rake generate
+</code></pre>
+
+<p>Then preview the website at local.</p>
+
+<pre><code>rake preview
+</code></pre>
+
+<p>This action will start a embeded webserver (WebBrick) listen at
+<a href="http://localhost:4000">http://localhost:4000</a>.
+The good thing is it will watch the file change and auto re-generate the
+website if an change is detected. To view the latest website, all you
+need to do is refresh the URL in your browser.</p>
+
+<h2>Deploy it to github pages</h2>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>Go and check it!</p>
+]]></content>
+  </entry>
+  
+</feed>
