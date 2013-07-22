@@ -44,5 +44,13 @@ website if an change is detected. To view the latest website, all you
 need to do is refresh the URL in your browser.
 ##Deploy it to github pages
     rake deploy
+##Push your new blog to source
+`rake deploy` only push the generated website to "master" branch of the
+remote octopress repository. It will not automatically add your new post to
+your local/remote repository. To save the new blog, you will need to add
+it to git, and then push it to remote "source".
+    git add .
+    git ci -am "add new post"
+    git push 
 
 Go and check it!
